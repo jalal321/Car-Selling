@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Random Design</title>
+  </head>
+  <body>
+    <header class="header">
+      <h2 class="logo">CarZilla <span>.</span></h2>
+      <div class="togglemenu" onclick="toggleMenu()"></div>
+      <ul class="navigation">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Price</a></li>
+        <li><a href="#">Package</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="text">
+          <h2>Always Choose A New Car</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+            repudiandae. Exercitationem accusamus voluptate accusantium. Ab
+            magnam recusandae enim? Et fuga laboriosam eligendi. Esse voluptatum
+            dignissimos ea inventore hic, ex odit.
+          </p>
+
+          <a href="#" class="btn">View More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about">
+      <div class="container">
+        <div class="row">
+          <div class="text">
+            <h2 class="heading">
+              <span>About Us</span> 
+            </h2>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed unde
+              voluptatibus esse qui quos ipsum eaque dignissimos animi!
+              Cupiditate doloremque sit, quasi qui ea veniam. Ex voluptatibus
+              dolor nihil animi! Lorem ipsum dolor sit amet, consectetur
+              adipisicing elit. Reiciendis veritatis unde, dolorum consequatur
+              harum debitis magnam aliquid officia nemo amet, exercitationem
+              <br />
+              necessitatibus temporibus dignissimos iste quisquam ex ipsam
+              fugiat consectetur
+            </p>
+          </div>
+          <div class="img">
+            <img src="images/car3.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section class="products">
+      <div class="container">
+        <div class="">
+          <h2 class="heading">
+          <span>Popular Products</span>
+          </h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed unde
+          </p>
+        </div>
+        <div class="content">
+          <div class="box">
+            <div class="imgbox">
+              <img src="images/car.jpg" alt="">
+            </div>
+            <div class="text">
+              <h3>New Model</h3>
+            </div>
+          </div>
+          <div class="box">
+            <div class="imgbox">
+              <img src="images/car1.jpg" alt="">
+            </div>
+            <div class="text">
+              <h3>New Model</h3>
+            </div>
+          </div>
+          <div class="box">
+            <div class="imgbox">
+              <img src="images/car2.jpg" alt="">
+            </div>
+            <div class="text">
+              <h3>New Model</h3>
+            </div>
+          </div>
+         
+          <div class="box">
+            <div class="imgbox">
+              <img src="images/car3.jpg" alt="">
+            </div>
+            <div class="text">
+              <h3>New Model</h3>
+            </div>
+          </div>
+          <div class="box">
+            <div class="imgbox">
+              <img src="images/car4.jpg" alt="">
+            </div>
+            <div class="text">
+              <h3>New Model</h3>
+            </div>
+          </div>
+          <div class="box">
+            <div class="imgbox">
+              <img src="images/car2.jpg" alt="">
+            </div>
+            <div class="text">
+              <h3>New Model</h3>
+            </div>
+          </div>
+        </div>
+        <div class="title">
+          <a href="#" class="btn">View All</a>
+        </div>
+      </div>
+  </section>
+
+      <script>
+        window.addEventListener("scroll", function () {
+          const header = document.querySelector("header");
+          header.classList.toggle("sticky", window.scrollY > 0);
+        });
+
+        function toggleMenu() {
+          const navigation = document.querySelector('.navigation');
+          const menu = document.querySelector('.togglemenu');
+          menu.classList.toggle('active');
+          navigation.classList.toggle('active');
+
+        }
+      </script>
+
+  </body>
+</html>

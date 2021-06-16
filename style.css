@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container{
+  padding: 100px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+}
+
+.heading {
+    border-bottom: 3px solid #ff6dd0;
+    font-size: 2em;
+    font-weight: 500;
+    margin-bottom: 1em;
+}
+.heading span{
+    padding-bottom: 10px;
+    position: relative;
+    padding: 0 30px 0 15px;
+    color: #fff;
+    background: #ff6dd0;
+}
+
+
+.heading span::after{
+     content: '';
+    position: absolute; 
+    border: 22px solid #ff6dd0;
+    margin: 0 0;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    transform: rotate(90deg);
+    margin-left: 30px; 
+    
+}
+
+.title{
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
+
+p{
+    color: #111;
+    font-weight: 300;
+}
+
+.btn{
+    color: #fff;
+    padding: 10px 30px;
+    margin-top: 20px;
+    font-size: 1em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    /* background: linear-gradient(to right ,#c5464f, #c5464f); */
+    background: #ff6dd0;
+    transition: 0.2s;
+}
+
+.btn:hover{
+    letter-spacing: 5px;
+    transition: 0.2s;
+}
+/* ----Header---- */
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    transition: 0.5s;
+}
+
+.header.sticky{
+    position: fixed;
+    background: #fff;
+    padding: 10px 100px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: 0.2s;
+}
+.header .logo{
+    color: #fff;
+    font-size: 2em;
+    font-weight: 700;
+}
+.header.sticky .logo{
+    color: #111;
+}
+.header .logo  span{
+    color: #ff6dd0;
+}
+.header ul {
+    display: flex; 
+}
+.header ul li{
+    margin-left: 2em;
+}
+.header ul li a{
+    color: #fff;
+    font-weight: 400;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.header ul li a::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    left: 50%;
+    height: 2px;
+    background: #ff6dd0;
+    bottom: -5px;
+    transition: 0.2s ease-in-out;
+}
+.header.sticky ul li a{
+    color: #111;
+}
+.header ul li a:hover::before{
+    width: 100%;
+    left: 0;
+    transition: 0.2s ease-in-out;
+}
+
+/* ----Hero---- */
+
+.hero{
+    background-image: linear-gradient(rgba(0,0,0,0.5) , rgba(0,0,0,0.5)) , url("images/car2.jpg");
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero .text{
+    max-width: 900px;
+    margin-top: 4em;
+    text-align: center;
+}
+.hero .text h2{
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 4.2em;
+}
+.hero .text p{
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+/* ----About----- */
+.about .text{
+    width: 48%;
+}
+.about .text h2{
+    /* font-size: 2em;
+    font-weight: 500; */
+    /* color: #111; */
+    /* text-align: center; */
+}
+.about .text p{
+    /* margin-top: 1em; */
+    line-height: 1.5;
+}
+.about .img{
+    width: 48%;
+}
+.about .img img{
+    width: 100%;
+
+}
+
+/* ---Products----- */
+.title{
+margin-bottom: 2em;
+
+}
+
+.title h2{
+font-size: 2em;
+font-weight: 500;
+
+}
+
+.title p{
+font-size: 1em;
+font-weight: 300;
+margin-top: 1em;
+
+}
+.products .content{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: center;
+position: relative;
+}
+.products .content .box{
+    width: 340px;
+    margin: 20px 0;
+    border: 10px solid #fff;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+}
+
+.products .content .box .imgbox{
+    width: 100%;
+    height: 300px;
+}
+
+.products .content .box .imgbox img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.products .content .box .text{
+    margin-top: 1em;
+}
+
+.products .content .box .text h3{
+    font-weight: 400;
+    color: #111;
+    padding: 5px 5px;
+}
+
+@media (max-width: 991px){
+    .container{
+        padding: 20px;
+      }
+      
+      .row{
+          flex-direction: column;
+      }
+
+      /* ---Header----- */
+      .header {
+        padding: 10px 20px;
+      }
+
+      .header.sticky {
+        padding: 10px 20px;
+      }
+      .header .navigation{
+          display: none;
+      }
+
+      .header .navigation.active{
+          position: fixed;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: #fff;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          z-index: 7;
+          transition: 0.2s;
+      }
+
+      .header .navigation li {
+        margin-left: 0;
+        margin-bottom: 10px;
+
+    }
+
+      .header .navigation li a {
+        color: #111;
+        padding-bottom: 0;
+        font-size: 1.5em;
+        font-weight: 400;
+      }
+
+     .header .togglemenu{
+          background: url("images/menu.png");
+          background-position: center;
+          background-size: cover;
+          width: 40px;
+          height: 40px;
+          cursor: pointer;
+          transition: 0.2s;
+      }
+
+     .header .togglemenu.active{
+          background: url("images/close1.png");
+          background-position: center;
+          background-size: cover;
+          width: 30px;
+          height: 30px;
+          cursor: pointer;
+          filter: invert();
+          z-index: 9;
+          transition: 0.2s;
+      }
+
+      .header.sticky .togglemenu{
+          filter: invert();
+      }
+      /* ---Hero---- */
+      .hero .text h2 {
+        margin-bottom: 10px;
+        font-size: 3em;
+    }
+    .about .text {
+        width: 100%;
+        margin-bottom: 2em;
+    }
+    .about .img {
+        width: 100%;
+    }
+
+    /* ---Products---- */
+    .products .content {
+        justify-content: center;
+    }
+}
